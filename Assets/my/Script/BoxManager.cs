@@ -10,7 +10,7 @@ public class BoxManager : MonoBehaviour {
 	Quaternion spawnRot;
 
 	public GameObject boxPrefab;
-	public Score scoreObject;
+	public GameController scoreObject;
 	public float spawnWait = 5.0f;
 	public float spawnAreaRadius = 10.0f;
 

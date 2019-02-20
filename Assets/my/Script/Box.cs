@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Box : MonoBehaviour {
 
-	public Score score { get; set; }
+	public GameController score { get; set; }
 
 	// Use this for initialization
 	void Start () {

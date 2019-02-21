@@ -11,16 +11,20 @@ public class PlayerControl : MonoBehaviour {
 	private Vector3 move;
 	private Vector3 camForward;
 	private Vector3 playerForward;
+	private AudioSource audio;
 
 	[SerializeField]
 	public float moveSpeed = 10.0f;
 	[SerializeField]
 	public float turnSpeed = 180.0f;
+	public AudioClip clip1;
+	public AudioClip clip2;
 
 	// Use this for initialization
 	void Start () {
 		navAgent = GetComponent<NavMeshAgent> ();
 		anim = GetComponent<Animator> ();
+		audio = GetComponent<AudioSource> ();
 
 		if (Camera.main != null) {
 			mainCam = Camera.main.transform;
@@ -54,6 +58,11 @@ public class PlayerControl : MonoBehaviour {
 		}
 
 		if (Input.GetButtonDown ("Fire1") && !anim.GetCurrentAnimatorStateInfo (0).IsName ("Attack") && !anim.IsInTransition (0)) {
+			if (Random.value < 0.5) {
+				audio.PlayOneShot (clip1);
+			} else {
+				audio.PlayOneShot (clip2);
+			}
 			anim.SetTrigger ("Attack");
 		}
 

@@ -11,7 +11,7 @@ public class BoxManager : MonoBehaviour {
 
 	public GameObject boxPrefab;
 	public GameController scoreObject;
-	public float spawnWait = 5.0f;
+	public float spawnWait = 4.0f;
 	public float spawnAreaRadius = 10.0f;
 
 	// Use this for initialization

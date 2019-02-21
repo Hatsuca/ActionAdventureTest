@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e328200f7353b144c902ee12a8c4cfa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakSound: {fileID: 1441340584577096, guid: 76641766144020c43a7b3b0a38fc1b8a, type: 2}
 --- !u!208 &208851534469888172
 NavMeshObstacle:
   m_ObjectHideFlags: 1
